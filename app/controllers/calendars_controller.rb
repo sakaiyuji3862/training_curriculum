@@ -30,6 +30,7 @@ class CalendarsController < ApplicationController
     # 今日の日付と、そのほかの
     plans = Plan.where(date: @todays_date..@todays_date + 6)
 
+    # pushメソッドの使い方としては、オブジェクト.push(“要素”)と書くことによって、その要素が配列の末尾に追加されます。
     7.times do |x|
       today_plans = []
       plans.each do |plan|
